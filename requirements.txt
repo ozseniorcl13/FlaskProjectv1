@@ -1,2 +1,3 @@
 Flask==2.2.2
+flask-marshmallow[sqlalchemy]==0.14.0
 connexion[swagger-ui]==2.14.1
