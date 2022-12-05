@@ -108,3 +108,13 @@ paths:
       responses:
         "200":
           description: "Successfully read one note"
+    delete:
+      operationId: "notes.delete"
+      summary: "Delete one note"
+      tags:
+        - "Notes"
+      parameters:
+        - $ref: '#/components/parameters/note_id'
+      responses:
+        "200":
+          description: "Successfully delete one note"
