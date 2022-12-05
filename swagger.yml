@@ -97,6 +97,28 @@ paths:
       responses:
         "204":
           description: "Successfully deleted person"
+  /notes:
+    post:
+      operationId: "notes.create"
+      summary: "Create one note"
+      tags:
+        - "Notes"
+      requestBody:
+        description: "Note to create"
+        required: True
+        content:
+          application/json:
+            schema:
+              x-body-name: "note"
+              type: "object"
+              properties:
+                person_id:
+                  type: "integer"
+                content:
+                  type: "string"
+      responses:
+        "200":
+          description: "Successfully updated one note"
   /notes/{note_id}:
     get:
       operationId: "notes.read_one"
