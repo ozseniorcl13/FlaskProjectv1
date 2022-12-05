@@ -118,3 +118,22 @@ paths:
       responses:
         "200":
           description: "Successfully delete one note"
+    put:
+      operationId: "notes.update"
+      summary: "Update one note"
+      tags:
+        - "Notes"
+      parameters:
+        - $ref: '#/components/parameters/note_id'
+      responses:
+        "200":
+          description: "Successfully updated one note"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              x-body-name: "note"
+              type: "object"
+              properties:
+                content:
+                  type: "string"
